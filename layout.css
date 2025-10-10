@@ -1,0 +1,288 @@
+/*header*/
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+/*tyvstjålet fra anders*/
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/* header slut*/
+
+.markessager {
+  background-color: #009846;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.sectiongrid_4-1 {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 10px;
+  margin: 20px;
+  gap: 10px;
+  background-color: #009846;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.sectiongrid_1-4 {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 10px;
+  margin: 20px;
+  gap: 10px;
+  background-color: #009846;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  img {
+    border-radius: 50%;
+    align-self: flex-start;
+  }
+}
+.sectiongrid_3-4 {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  justify-content: center; /*virker ikke*/
+  padding: 10px;
+  img {
+    border-radius: 10px;
+  }
+}
+
+.sectiongrid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+  gap: 10px;
+  text-align: center;
+}
+
+.sectionommig {
+  background-color: #e5007e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 350px;
+  max-height: 550px;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+}
+
+.ommigtekst {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f1f1f1;
+  color: black;
+  border-radius: 10px;
+}
+.skovlundetekst {
+  color: black;
+}
+.arbejdetekst {
+  color: black;
+}
+
+.sectiongrid_1-1-1_icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  margin: 20px;
+}
+
+.vedligeholdvideo {
+  padding: 20px;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.sectiongrid_3-2 {
+  background-color: #e5007e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: grid;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  max-width: 800px;
+  justify-content: center;
+  img {
+    border-radius: 10px;
+    max-width: 250px;
+  }
+}
+.sectiongrid_2-3 {
+  background-color: #009846;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: grid;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+  max-width: 800px;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .headerlogo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .sannefandruplogo {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .radikalelogo {
+    max-width: 300px;
+    height: auto;
+  }
+
+  main {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .sectiongrid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    margin: 20px;
+  }
+  .sectionommig {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .sectionvedligeholdvideo {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .sectiongrid_3-2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+
+  .sannefandrupkælder {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .sectiongrid_2-3 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+  .sectionballerup {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    justify-content: center;
+  }
+  .sectionlarsvideo {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    justify-content: center;
+  }
+  .larsvideo {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+}
+
+.kontakt {
+  display: grid;
+  grid-column: 1/3;
+  padding: 20px;
+}
