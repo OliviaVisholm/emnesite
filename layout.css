@@ -41,6 +41,7 @@ a:hover {
   width: 30px;
   height: 20px;
   cursor: pointer;
+  padding: 10px;
 }
 
 .burger .line {
@@ -179,9 +180,11 @@ a:hover {
 }
 .skovlundetekst {
   color: black;
+  text-shadow: none;
 }
 .arbejdetekst {
   color: black;
+  text-shadow: none;
 }
 
 .sectiongrid_1-1-1_icon {
@@ -237,20 +240,20 @@ a:hover {
   justify-content: center;
 }
 
+.sannefandruplogo {
+  max-width: 300px;
+  height: auto;
+}
+
+.radikalelogo {
+  max-width: 300px;
+  height: auto;
+}
 @media (min-width: 800px) {
   .headerlogo {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-  .sannefandruplogo {
-    max-width: 300px;
-    height: auto;
-  }
-
-  .radikalelogo {
-    max-width: 300px;
-    height: auto;
   }
 
   main {
